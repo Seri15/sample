@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organics</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="img/logo.jpg" alt=""></a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    
+    </header>
+    <section class="home" id="home">
+        <div class="home-text">
+            <span>Welcome To</span>
+            <h1>Organics</h1>
+            <h2>Get fresh and organic food delivered <br>with just a click</h2>
+            <a href="#shop" class="btn" id="get-started">Get Started</a>
+        </div>
+        <div class="home-img">
+            <img src="img/home.png" alt="">
+        </div>
+
+        <div class="chat-container" style="display: none;">
+            <div class="chat-header">
+                <h2>Chatbot</h2>
+                <a href="#" class="xchat">x</a>
+            </div>
+            <div class="chat-body" id="chatBody">
+                
+            </div>
+            <div class="chat-footer">
+                <input type="text" id="userInput" placeholder="Type your message here...">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+        <div class="chat-btn"> 
+            <a href="#" class="btnchat">Chatbot</a>
+
+        </div>
+    </section>
+    <section class="shop" id="shop">
+        <div class="heading">
+            <h1>Shop Now</h1>
+             <span class="pop">Popular</span>
+        </div>
+        <div class="shopbtn">
+            <div class="shopbutton">
+                <button onclick="showSelection('fruits')" id="shopbuttons"><img src="img/fruits.png" alt=""></button>
+                <button onclick="showSelection('vegetables')" id="shopbuttons"><img src="img/vegetables.png" alt=""></button>
+                <button onclick="showSelection('greens')"  id="shopbuttons"><img src="img/greens.png" alt=""></button>
+                <button onclick="showSelection('mushrooms')"  id="shopbuttons"><img src="img/mushrooms.png" alt=""></button>
+            </div>
+        </div>
+        <div class="shop-container" id="popular">
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/apple.png" alt="">
+                </div>
+                <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <h2>Apples</h2>
+                <span>₱20</span>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/strawberry.png" alt="">
+                </div>
+                <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <h2>Strawberry</h2>
+                <span>₱99</span>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/avocado.png" alt="">
+                </div>
+                <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <h2>Avocado</h2>
+                <span>₱80</span>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+            
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/lettuce-removebg-preview.png" alt="">
+                </div>
+                <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <h2>Lettuce</h2>
+                <span>₱99</span>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/tomatoes-removebg-preview.png" alt="">
+                </div>
+                <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <h2>Tomato</h2>
+                <span>₱59</span>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/cherry-removebg-preview.png" alt="">
+                </div>
+                <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <h2>Cherry</h2>
+                <span>₱199</span>
+                <a href="#" class="btn">Order Now</a>
+            </div>       
+         </div>
+
+
+
+         <div class="shop-container" id="fruits" style="display: none;">
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/apple.png" alt="">
+                </div>
+                <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <h2>Apple</h2>
+                <span>₱20</span>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/strawberry.png" alt="">
+                </div>
+                <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <h2>Strawberry</h2>
+                <span>₱99</span>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/cherry-removebg-preview.png" alt="">
+                </div>
+                <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <h2>Cherry</h2>
+                <span>₱199</span>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/avocado.png" alt="">
+                </div>
+                <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <h2>Avocado</h2>
+                <span>₱80</span>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/peach-removebg-preview.png" alt="">
+                </div>
+                <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <h2>Peach</h2>
+                <span>₱189</span>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/grapes.png" alt="">
+                </div>
+                <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <h2>Grapes</h2>
+                <span>₱139</span>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+
+        </div>
+
+
+
+
+        <div class="shop-container" id="vegetables" style="display: none;">
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/raddish-removebg-preview.png" alt="">
+                </div>
+                <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <h2>Radish</h2>
+                <span>₱85</span>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/bellpepper-removebg-preview.png" alt="">
+                </div>
+                <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <h2>Bell Pepper</h2>
+                <span>₱59</span>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/beet-removebg-preview.png" alt="">
+                </div>
+                <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <h2>Beet</h2>
+                <span>₱99</span>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/onion-removebg-preview.png" alt="">
+                </div>
+                <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <h2>Onion</h2>
+                <span>₱49</span>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/tomatoes-removebg-preview.png" alt="">
+                </div>
+                <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <h2>Tomato</h2>
+                <span>₱59</span>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/squash-removebg-preview.png" alt="">
+                </div>
+                <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <h2>Squash</h2>
+                <span>₱80</span>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+
+        </div>
+
+
+
+
+        <div class="shop-container" id="greens" style="display: none;">
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/basil-removebg-preview.png" alt="">
+                </div>
+                <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <h2>Basil</h2>
+                <span>₱79</span>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/Spinach-removebg-preview.png" alt="">
+                </div>
+                <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <h2>Spinach</h2>
+                <span>₱89</span>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/lettuce-removebg-preview.png" alt="">
+                </div>
+                <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <h2>Lettuce</h2>
+                <span>₱99</span>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/cabbage-removebg-preview.png" alt="">
+                </div>
+                <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <h2>Cabbage</h2>
+                <span>₱69</span>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/kale-removebg-preview.png" alt="">
+                </div>
+                <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <h2>Kale</h2>
+                <span>₱250</span>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/asparagus-removebg-preview.png" alt="">
+                </div>
+                <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <h2>Asparagus</h2>
+                <span>₱260</span>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+
+        </div>
+
+
+
+        <div class="shop-container" id="mushrooms" style="display: none;">
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/Shiitake.png" alt="">
+                </div>
+                <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <h2>Shitake</h2>
+                <span>₱369</span>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/truffle.png" alt="">
+                </div>
+                <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <h2>Truffle</h2>
+                <span>₱4420</span>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/cremini.png" alt="">
+                </div>
+                <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <h2>Cremini</h2>
+                <span>₱299</span>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/maitake.webp" alt="">
+                </div>
+                <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <h2>Maitake</h2>
+                <span>₱899</span>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/enoki.png" alt="">
+                </div>
+                <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <h2>Enoki</h2>
+                <span>₱75</span>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/buna_shimeji.png" alt="">
+                </div>
+                <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <h2>Buna Shimeji</h2>
+                <span>₱76</span>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+
+        </div>
+
+    </section>
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="img/Organics.jpg" alt="">
+        </div>
+        <div class="about-text">
+            <h2>Vision</h2>
+            <p>"A healthier world where everyone has access to pure, sustainable, and organic products that enhance well-being and promote environmental stewardship."</p>
+            
+        </div>
+        <div class="about-text">
+            <h2>Mission</h2>
+            <p>We are dedicated to providing high-quality organic products that nourish the body and respect the planet. We strive to support sustainable farming practices, foster a community of health-conscious consumers, and inspire positive change through our commitment to transparency, integrity, and environmental responsibility.</p>
+            <a href="#" class="btn">Learn More</a>
+        </div>
+
+    </section>
+    <section class="contact" id="contact">
+        <div class="social">
+            <a href="#"><i class="bx bxl-facebook"></i></a>
+            <a href="#"><i class="bx bxl-twitter"></i></a>
+            <a href="#"><i class="bx bxl-instagram"></i></a>
+            <a href="#"><i class="bx bxl-gmail"></i></a>
+        </div>
+        <div class="links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+            <a href="#">Our Company</a>
+        </div>
+        <p>&#169; Organics All Right Reserved.  </p>
+    </section>
+    <script>
+        var menu = document.querySelector('#menu-icon');
+        var navbar = document.querySelector('.navbar');
+    
+        menu.onclick = () => {
+            menu.classList.toggle('bx-x');
+            navbar.classList.toggle('active');
+        }
+    
+        window.onscroll = () => {
+            menu.classList.remove('bx-x');
+            navbar.classList.remove('active');
+        }
+    
+        function showSelection(selection) {
+            var fruits = document.querySelector('#fruits');
+            var vegetables = document.querySelector('#vegetables');
+            var greens = document.querySelector('#greens');
+            var mushrooms = document.querySelector('#mushrooms');
+            var popular = document.querySelector('#popular');
+    
+            switch (selection) {
+                case 'fruits':
+                    if (fruits.style.display === 'none') {
+                        fruits.style.display = 'flex';
+                        popular.style.display = 'none';
+                        vegetables.style.display = 'none';
+                        greens.style.display = 'none';
+                        mushrooms.style.display = 'none';
+                    }
+                    break;
+                case 'vegetables':
+                    if (vegetables.style.display === 'none') {
+                        vegetables.style.display = 'flex';
+                        popular.style.display = 'none';
+                        fruits.style.display = 'none';
+                        greens.style.display = 'none';
+                        mushrooms.style.display = 'none';
+                    }
+                    break;
+                case 'greens':
+                    if (greens.style.display === 'none') {
+                        greens.style.display = 'flex';
+                        popular.style.display = 'none';
+                        fruits.style.display = 'none';
+                        vegetables.style.display = 'none';
+                        mushrooms.style.display = 'none';
+                    }
+                    break;
+                case 'mushrooms':
+                    if (mushrooms.style.display === 'none') {
+                        mushrooms.style.display = 'flex';
+                        popular.style.display = 'none';
+                        fruits.style.display = 'none';
+                        greens.style.display = 'none';
+                        vegetables.style.display = 'none';
+                    }
+                    break;
+                default:
+                    break;
+            }
+        }
+    
+        const chatBody = document.getElementById('chatBody');
+        const userInput = document.getElementById('userInput');
+        const chatContainer = document.querySelector('.chat-container');
+        const chatButton = document.querySelector('.btnchat');
+        const xchat = document.querySelector('.xchat');
+    
+        chatButton.addEventListener('click', () => {
+            chatContainer.style.display = 'flex';
+            chatButton.style.display = 'none';
+        });
+    
+        xchat.addEventListener('click', () => {
+            chatContainer.style.display = 'none';
+            chatButton.style.display = 'flex';
+        });
+    
+        function sendMessage() {
+            const message = userInput.value;
+            if (message.trim() === '') return;
+            addMessage('user', message);
+            userInput.value = '';
+            botReply(message);
+        }
+    
+        function addMessage(sender, text) {
+            const messageElement = document.createElement('div');
+            messageElement.classList.add('message', sender);
+            messageElement.textContent = text;
+            chatBody.appendChild(messageElement);
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }
+    
+        function botReply(userMessage) {
+            let reply;
+            const message = userMessage.toLowerCase(); // Correctly define the message variable
+            if (message.includes('hello')) {
+                reply = 'Hi there! How can I assist you with our organic products?';
+            } else if (message.includes('price')) {
+                reply = 'Our prices vary depending on the product. You can see the prices in the shop section.';
+            } else if (message.includes('organic')) {
+                reply = 'Yes, all our products are 100% organic and certified.';
+            }else if (message.includes('where') || message.includes('do')  && message.includes('store')) {
+                reply = 'Our physical store can be found in Arellano Street Dagupan City.';
+            } else if (message.includes('founder')||message.includes('member'))  {
+                reply = 'The founding members are MC Celino, Ma. Stephanie Chavez, Regine Mae Dales, and Mark Oliver Buduan .';
+            }else if (message.includes('thank you'))  {
+                reply = 'The pleasure is mine.';
+            }else if (message.includes('bye'))  {
+                reply = 'Goodbye! Please Come Again.';
+            }else {
+                reply = 'I am not sure how to respond to that. Could you please ask something else?';
+            }
+            setTimeout(() => addMessage('bot', reply), 500);
+        }
+    </script>
+    
+</body>
+</html>
